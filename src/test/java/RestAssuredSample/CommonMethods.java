@@ -1,4 +1,4 @@
-package Workspace_Selenium.RestAssuredSample;
+package RestAssuredSample;
 
 import io.restassured.path.json.JsonPath;
 

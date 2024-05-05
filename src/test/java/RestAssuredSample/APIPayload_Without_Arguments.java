@@ -1,4 +1,4 @@
-package Workspace_Selenium.RestAssuredSample;
+package RestAssuredSample;
 
 public class APIPayload_Without_Arguments
 {

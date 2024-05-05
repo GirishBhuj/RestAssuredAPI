@@ -1,4 +1,4 @@
-package Workspace_Selenium.RestAssuredSample;
+package RestAssuredSample;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import org.json.JSONObject;
@@ -12,11 +12,7 @@ import io.restassured.path.json.JsonPath;
 public class ReadJSONFile {
 
 	public static void main(String[] args) throws IOException
-	{
-		//given - API all input details, query and path parameters
-		//when - Submit the API - resource, methods of request
-		//Then - request response
-		
+	{		
 		//Add address
 		RestAssured.baseURI = "https://www.rahulshettyacademy.com";
 		
@@ -53,7 +49,5 @@ public class ReadJSONFile {
 		
 		System.out.println("Response PlaceID "+mPlaceID);
 		System.out.println("Response Reference "+mRef);
-
-		//String bookname=mResponse.jsonPath().get("book[3].title").toString();
 	}
 }

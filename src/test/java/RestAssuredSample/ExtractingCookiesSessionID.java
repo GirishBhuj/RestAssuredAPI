@@ -1,4 +1,4 @@
-package Workspace_Selenium.RestAssuredSample;
+package RestAssuredSample;
 
 import static io.restassured.RestAssured.*;
 import java.io.File;

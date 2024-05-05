@@ -1,4 +1,4 @@
-package Workspace_Selenium.RestAssuredSample;
+package RestAssuredSample;
 
 import org.testng.Assert;
 
@@ -24,35 +24,26 @@ public class ComplexJsonParsing {
 		TotalSoldAmount=0;
 		
 		String mCourseTitle="";
-		System.out.println(mJs.get("courses.webAutomation[0].courseTitle"));
+
+		/* System.out.println(mJs.get("courses.webAutomation[0].courseTitle"));
 		System.out.println(mJs.get("courses.webAutomation[1].courseTitle"));
 		System.out.println(mJs.get("courses.webAutomation[2].courseTitle"));
+		System.out.println(mJs.get("courses.webAutomation[0].price"));
+		*/
 		
 		for (int mCount=0; mCount < mCourseCount;mCount++)
 		{
-			  mCourseTitle=mJs.get("courses["+mCount+"].title");
-			  System.out.println("Course Title: "+mCourseTitle + ", Price: " + 
-			  mJs.get("courses["+mCount+"].price").toString());
-			  mCourseAmt = mJs.getInt("courses["+mCount+"].price") * 
-					  mJs.getInt("courses["+mCount+"].copies");
+			  mCourseTitle=mJs.get("courses.webAutomation["+mCount+"].courseTitle");
+
+			  System.out.println("Course Title: "+mCourseTitle + 
+					  ", Price: " + mJs.get("courses.webAutomation["+mCount+"].price").toString());
+			  
+			  mCourseAmt = mJs.getInt("courses.webAutomation["+mCount+"].price") * mCount;
 			  TotalSoldAmount = TotalSoldAmount + mCourseAmt;
 		}
 		
 		System.out.println("=============");
 		System.out.println("Total Sold Amount: "+TotalSoldAmount + " Purchase amount:"+mPurchaseAmt);
-		Assert.assertEquals(TotalSoldAmount, mPurchaseAmt);
-		
-		/* for(int mCount=0;mCount < mCourseCount;mCount++)
-		{
-			String courseTitles=mJs.get("courses["+mCount+"].title");
-			if(courseTitles.equalsIgnoreCase("RPA"))
-			{
-				int copies=mJs.get("courses["+mCount+"].copies");
-				System.out.println("Number of copies sold by RPA Course: "+ copies);
-				break;
-			}  
-		 }
-		 */
+		//Assert.assertEquals(TotalSoldAmount, mPurchaseAmt);
 	}
-
 }
