@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 public class JSONResponseDataParsingUsingPath {
 
-	@Test(priority=1)
+	//@Test(priority=1)
 	void testJsonResponse()
 	{
 		//Appoach1	
@@ -46,7 +46,7 @@ public class JSONResponseDataParsingUsingPath {
 	}
 	
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	void testJsonResponseBodyData()
 	{	
 		Response res=
@@ -54,8 +54,7 @@ public class JSONResponseDataParsingUsingPath {
 					.contentType(ContentType.JSON)
 				.when()
 					.get("http://localhost:3000/store");
-		
-				
+
 		//using JSONObject class
 		JSONObject jo=new JSONObject(res.asString()); //converting response to JSON Object
 		
@@ -69,8 +68,7 @@ public class JSONResponseDataParsingUsingPath {
 		//search for title of the book in json  - validation 1
 		boolean status=false;
 		
-		for(int i=0; i<jo.getJSONArray("book").length();i++)
-		{
+		for(int i=0; i<jo.getJSONArray("book").length();i++) {
 			String bookTitle=jo.getJSONArray("book").getJSONObject(i).get("title").toString();
 			
 			if(bookTitle.equals("The Lord of the Rings"))
@@ -86,30 +84,13 @@ public class JSONResponseDataParsingUsingPath {
 		//validate total price of books   - validation 2
 		
 		double totalprice=0;
-		for(int i=0; i<jo.getJSONArray("book").length();i++)
-		{
+		for(int i=0; i<jo.getJSONArray("book").length();i++) {
 			String price=jo.getJSONArray("book").getJSONObject(i).get("price").toString();
 			
 			totalprice=totalprice+Double.parseDouble(price);
-		
 		}
 		
 		System.out.println("total price of books is:"+ totalprice);
-		Assert.assertEquals(totalprice,53.92);  
-		
-		
-	}
-	
+		Assert.assertEquals(totalprice,53.92);	
+	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-

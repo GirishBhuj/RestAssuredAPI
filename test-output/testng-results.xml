@@ -1,119 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-05T18:53:15 IST" name="Default suite" finished-at="2024-05-05T18:53:22 IST" duration-ms="7247">
+  <suite started-at="2024-05-05T19:05:29 IST" name="Default suite" finished-at="2024-05-05T19:05:33 IST" duration-ms="3155">
     <groups>
     </groups>
-    <test started-at="2024-05-05T18:53:15 IST" name="Default test" finished-at="2024-05-05T18:53:22 IST" duration-ms="7247">
-      <class name="RestAssuredSample.ParsingXMLResponse">
-        <test-method signature="testXMLResponse()[pri:0, instance:RestAssuredSample.ParsingXMLResponse@58d75e99]" started-at="2024-05-05T18:53:15 IST" name="testXMLResponse" finished-at="2024-05-05T18:53:22 IST" duration-ms="6538" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [200] but found [404]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at org.testng.Assert.assertEquals(Assert.java:1429)
-at RestAssuredSample.ParsingXMLResponse.testXMLResponse(ParsingXMLResponse.java:40)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test started-at="2024-05-05T19:05:29 IST" name="Default test" finished-at="2024-05-05T19:05:33 IST" duration-ms="3155">
+      <class name="RestAssuredSample.JSONResponseDataParsingUsingPath">
+        <test-method signature="testJsonResponseBodyData()[pri:2, instance:RestAssuredSample.JSONResponseDataParsingUsingPath@58d75e99]" started-at="2024-05-05T19:05:30 IST" name="testJsonResponseBodyData" finished-at="2024-05-05T19:05:33 IST" duration-ms="3030" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testXMLResponse -->
-        <test-method signature="testXMLResponseBody()[pri:0, instance:RestAssuredSample.ParsingXMLResponse@58d75e99]" started-at="2024-05-05T18:53:22 IST" name="testXMLResponseBody" finished-at="2024-05-05T18:53:22 IST" duration-ms="454" status="FAIL">
-          <exception class="io.restassured.path.xml.exception.XmlPathException">
-            <message>
-              <![CDATA[Failed to parse the XML document]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.restassured.path.xml.exception.XmlPathException: Failed to parse the XML document
-at io.restassured.path.xml.XmlPath$LazyXmlParser.invoke(XmlPath.java:1039)
-at io.restassured.path.xml.XmlPath.getFromPath(XmlPath.java:423)
-at io.restassured.path.xml.XmlPath.get(XmlPath.java:317)
-at io.restassured.path.xml.XmlPath.getAsList(XmlPath.java:882)
-at io.restassured.path.xml.XmlPath.getAsList(XmlPath.java:878)
-at io.restassured.path.xml.XmlPath.getList(XmlPath.java:330)
-at RestAssuredSample.ParsingXMLResponse.testXMLResponseBody(ParsingXMLResponse.java:63)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
-at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1251)
-at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
-at groovy.xml.XmlSlurper.parse(XmlSlurper.java:199)
-at groovy.xml.XmlSlurper.parse(XmlSlurper.java:252)
-at groovy.xml.XmlSlurper.parseText(XmlSlurper.java:282)
-at io.restassured.path.xml.XmlPath$1.method(XmlPath.java:840)
-at io.restassured.path.xml.XmlPath$LazyXmlParser.invoke(XmlPath.java:1032)
-... 34 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.restassured.path.xml.exception.XmlPathException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testXMLResponseBody -->
-      </class> <!-- RestAssuredSample.ParsingXMLResponse -->
+        </test-method> <!-- testJsonResponseBodyData -->
+      </class> <!-- RestAssuredSample.JSONResponseDataParsingUsingPath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
