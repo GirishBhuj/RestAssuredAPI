@@ -3,6 +3,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
@@ -40,13 +41,29 @@ public class JSONResponseDataParsingUsingPath {
 		
 		Assert.assertEquals(res.getStatusCode(),200);
 		Assert.assertEquals(res.header("Content-Type"),"application/json");
-		
+
 		String bookname=res.jsonPath().get("book[3].title").toString();
-		Assert.assertEquals(bookname,"The Lord of the Rings");
+		Assert.assertEquals(bookname,"The Lord of the Rings");		
+	}
+
+	@Test(priority=2)
+	void JsonDataParsing()
+	{
+        String jsonString = "{ \"instructor\": \"RahulShetty\", \"url\": \"rahulshettycademy.com\", \"services\": \"projectSupport\","
+        		+ " \"expertise\": \"Automation\", \"courses\": { \"webAutomation\": [ { \"courseTitle\": \"Selenium Webdriver Java\", "
+        		+ "\"price\": \"50\" }, { \"courseTitle\": \"Cypress\", \"price\": \"40\" }, { \"courseTitle\": \"Protractor\", \"price\": "
+        		+ "\"40\" } ], \"api\": [ { \"courseTitle\": \"Rest Assured Automation using Java\", \"price\": \"50\" }, { \"courseTitle\":"
+        		+ " \"SoapUI Webservices testing\", \"price\": \"40\" } ], \"mobile\": [ { \"courseTitle\": \"Appium-Mobile Automation using"
+        		+ " Java\", \"price\": \"50\" } ] }, \"linkedIn\": \"https://www.linkedin.com/in/rahul-shetty-trainer/\" }";
+
+        JsonPath jsonPath = new JsonPath(jsonString);
+
+        System.out.println("Book title : " + jsonPath.getString("courses.webAutomation[1].courseTitle"));
+        System.out.println("Price : " + jsonPath.getString("courses.webAutomation[1].price"));
+        
 	}
 	
-	
-	@Test(priority=2)
+	//@Test(priority=2)
 	void testJsonResponseBodyData()
 	{	
 		Response res=

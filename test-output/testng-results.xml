@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-05T19:05:29 IST" name="Default suite" finished-at="2024-05-05T19:05:33 IST" duration-ms="3155">
+  <suite started-at="2024-05-15T23:04:59 IST" name="Default suite" finished-at="2024-05-15T23:05:02 IST" duration-ms="2434">
     <groups>
     </groups>
-    <test started-at="2024-05-05T19:05:29 IST" name="Default test" finished-at="2024-05-05T19:05:33 IST" duration-ms="3155">
+    <test started-at="2024-05-15T23:04:59 IST" name="Default test" finished-at="2024-05-15T23:05:02 IST" duration-ms="2434">
       <class name="RestAssuredSample.JSONResponseDataParsingUsingPath">
-        <test-method signature="testJsonResponseBodyData()[pri:2, instance:RestAssuredSample.JSONResponseDataParsingUsingPath@58d75e99]" started-at="2024-05-05T19:05:30 IST" name="testJsonResponseBodyData" finished-at="2024-05-05T19:05:33 IST" duration-ms="3030" status="PASS">
+        <test-method signature="JsonDataParsing()[pri:2, instance:RestAssuredSample.JSONResponseDataParsingUsingPath@58d75e99]" started-at="2024-05-15T23:05:00 IST" name="JsonDataParsing" finished-at="2024-05-15T23:05:02 IST" duration-ms="2322" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testJsonResponseBodyData -->
+        </test-method> <!-- JsonDataParsing -->
       </class> <!-- RestAssuredSample.JSONResponseDataParsingUsingPath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
